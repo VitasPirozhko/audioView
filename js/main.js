@@ -2,6 +2,7 @@ let audio = document.getElementById('audio');
 audio.crossOrigin = "anonymous";
 const logo = document.getElementById('logo').style;
 let analyser, context, src, array;
+let AudioContext = window.AudioContext  || window.webkitAudioContext || false;
 
 window.onclick = function () {
     if(!context) {
@@ -16,9 +17,7 @@ window.onclick = function () {
 };
 
 function preparation() {
-    context = new AudioContext // Default
-        || window.webkitAudioContext // Safari and old versions of Chrome
-        || false;
+    context = new AudioContext();
     analyser = context.createAnalyser();
     src = context.createMediaElementSource(audio);
 
