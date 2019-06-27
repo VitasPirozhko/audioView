@@ -4,8 +4,15 @@ const logo = document.getElementById('logo').style;
 let analyser, context, src, array;
 
 window.onclick = function () {
-    audio.paused ? audio.play() : audio.pause();
-    preparation();
+    if(audio.paused){
+        audio.play();
+        loop();
+    }else{
+        audio.pause();
+    }
+    if(!context) {
+        preparation();
+    }
 };
 
 function preparation() {
@@ -20,7 +27,9 @@ function preparation() {
 }
 
 function loop() {
-    window.requestAnimationFrame(loop);
+    if(!audio.paused) {
+        window.requestAnimationFrame(loop);
+    }
     array = new Uint8Array(analyser.frequencyBinCount);
     analyser.getByteFrequencyData(array);
 
