@@ -4,14 +4,14 @@ const logo = document.getElementById('logo').style;
 let analyser, context, src, array;
 
 window.onclick = function () {
+    if(!context) {
+        preparation();
+    }
     if(audio.paused){
         audio.play();
         loop();
     }else{
         audio.pause();
-    }
-    if(!context) {
-        preparation();
     }
 };
 
