@@ -16,7 +16,9 @@ window.onclick = function () {
 };
 
 function preparation() {
-    context = new AudioContext();
+    context = new AudioContext // Default
+        || window.webkitAudioContext // Safari and old versions of Chrome
+        || false;
     analyser = context.createAnalyser();
     src = context.createMediaElementSource(audio);
 
