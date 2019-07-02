@@ -40,7 +40,7 @@ function loop() {
 
 
 
-/*MeteorRain = new function() {
+MeteorRain = new function() {
     var SCREEN_WIDTH = window.innerWidth;
     var SCREEN_HEIGHT = window.innerHeight;
 
@@ -180,4 +180,4 @@ function Cursor() {
     this.position = {x: 0, y: 0};
 }
 
-MeteorRain.init();*/
+MeteorRain.init();
