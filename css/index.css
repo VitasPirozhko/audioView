@@ -4,21 +4,8 @@
     border-radius: 50%;
     background: blue;
     position: relative;
+    z-index: 9;
 }
-
-#logo:after {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    bottom: 115%;
-    left: 50%;
-    margin-left: -10px;
-    background: blue;
-    border-radius: 50%;
-}
-
 body{
     display: flex;
     justify-content: center;
@@ -27,4 +14,74 @@ body{
     margin: 0;
     min-height: 100vh;
     background: #000;
+}
+#logo .circle {
+    display: block;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    background: blue;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+#logo .circle.one {
+    bottom: auto;
+    top: 150%;
+}
+#logo .circle.two {
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 150%;
+    left: auto;
+}
+#logo .circle.three {
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 150%;
+}
+#logo .circle.four {
+    left: 0;
+    top: 0;
+    transform: none;
+}
+#logo .circle.four1 {
+    left: auto;
+    top: 0;
+    right: 0;
+    transform: none;
+}
+#logo .circle.four2 {
+    left: auto;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    transform: none;
+}
+#logo .circle.four3 {
+    left: 0;
+    top: auto;
+    bottom: 0;
+    transform: none;
+}
+#logo .circle.four4 {
+    left: 50%;
+    bottom: auto;
+    top: -20%;
+}
+#logo .circle.four5 {
+    left: 50%;
+    bottom: -20%;
+}
+#logo .circle.four6 {
+    left: -20%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#logo .circle.four7 {
+    left: auto;
+    right: -20%;
+    transform: translateY(-50%);
+    top: 50%;
 }
