@@ -4,6 +4,7 @@ import audioSrc from '../audio/Twenty_Miles_-_NBSPLV.mp3'
 let audio = document.getElementById('audio');
 audio.src = audioSrc;
 audio.crossOrigin = "anonymous";
+
 const logo = document.getElementById('logo').style;
 let analyser, context, src, array;
 let AudioContext = window.AudioContext  || window.webkitAudioContext || false;

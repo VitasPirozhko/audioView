@@ -1,6 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const PATHS = {
+    build: path.join(__dirname, 'docs')
+};
+
 module.exports = {
     //...
     devServer: {
@@ -9,6 +13,10 @@ module.exports = {
         port: 9000
     },
     entry: './js/main.js',
+    output: {
+        path: PATHS.build,
+        filename: 'js/[name].js'
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.html'
