@@ -6,22 +6,11 @@ const PATHS = {
 };
 
 module.exports = {
-    //...
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
-        port: 9000
-    },
     entry: './js/main.js',
     output: {
         path: PATHS.build,
         filename: 'js/[name].js'
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: 'index.html'
-        }),
-    ],
     module: {
         rules: [
             {
@@ -33,5 +22,10 @@ module.exports = {
                 loader: 'file-loader'
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './index.html'
+        }),
+    ],
 };
