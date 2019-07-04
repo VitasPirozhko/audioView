@@ -1,0 +1,31 @@
+{
+  "name": "audioview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitasPirozhko/audioView.git"
+  },
+  "author": "Vitas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitasPirozhko/audioView/issues"
+  },
+  "homepage": "https://github.com/VitasPirozhko/audioView#readme",
+  "devDependencies": {
+    "webpack": "^4.35.2",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "css-loader": "^3.0.0",
+    "file-loader": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "webpack-cli": "^3.3.5"
+  }
+}
